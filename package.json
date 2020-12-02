@@ -1,0 +1,43 @@
+{
+  "name": "automation-demo",
+  "version": "1.0.0",
+  "description": "UI automation with selenium, Jest and ES6",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --runInBand"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "./src/helpers/SuccessfulLaunch.js"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Enzyoh/automation-demo.git"
+  },
+  "keywords": [
+    "automation",
+    "ui",
+    "testing",
+    "selenium",
+    "chrome"
+  ],
+  "author": "Menzi Motsa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Enzyoh/automation-demo/issues"
+  },
+  "homepage": "https://github.com/Enzyoh/automation-demo#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.12.7",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^26.6.3",
+    "chromedriver": "^86",
+    "jasmine": "^3.6.3",
+    "jest": "^26.6.3"
+  },
+  "dependencies": {
+    "selenium-webdriver": "^4.0.0-alpha.7"
+  }
+}
