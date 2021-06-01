@@ -20,26 +20,28 @@ class ConfigModel {
         startserver,
         launchroute,
         profileroute,
-        startparams,
+        username,
+        password,
         loginroute
     }) {
         if (startserver) this.config.startserver = startserver
         if (loginroute) this.config.loginroute = loginroute 
         if (launchroute) this.config.launchroute = launchroute         
         if (profileroute) this.config.profileroute = profileroute
-        if (startparams) this.config.startparams = startparams
+        if (username) this.config.username = username
+        if (password) this.config.password = password
     }
 
     loginUrl () {
-        return this._config.startserver + this._config.loginroute
+        return this._config.startserver
     }
 
     launchUrl () {
-        return this._config.startserver + this._config.launchroute + this._config.startparams   
+        return this._config.startserver
     }
 
     profileUrl () {
-        return this._config.startserver + this._config.profileroute
+        return this._config.startserver
     }
 }
 

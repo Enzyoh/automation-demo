@@ -1,3 +1,5 @@
 {
-    "startparams": "?userType=guest&title=mr&firstname=Uninvited&lastname=Guest"
+    "startparams2": "?userType=guest&title=mr&firstname=Uninvited&lastname=Guest",
+    "username": "guest",
+    "password": "R@ndom!"
 }

@@ -1,5 +1,5 @@
 {
     "startserver": "http://localhost:3000/",
-    "loginroute": "Login",
-    "profileroute": "Profile"
+    "loginroute": "",
+    "profileroute": ""
 }

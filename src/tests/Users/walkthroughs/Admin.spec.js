@@ -15,33 +15,30 @@ const launchSetup = async () => {
 
 testBootstrapInstance.launchSetup = launchSetup
 
-beforeAll(() => {
+describe('Successful admin login ', () => {
         it('Must allow entering of the admin username', async (done) => {
-            const usernameField = await testInterface.getVisibleElementById('Username')
+            const usernameField = await testBootstrapInstance.getVisibleElementById('Username')
             expect(usernameField).toBeDefined()
             usernameField.clear();
-            usernameField.sendKeys('Admin')
+            usernameField.sendKeys('admin')
+            await testBootstrapInstance.waitForSeconds(2)
             done()
         })
     
         it('Must Allow entering of the password', async (done) => {
-            const passwordField = await testInterface.getVisibleElementById('Password')
+            const passwordField = await testBootstrapInstance.getVisibleElementById('Password')
             expect(passwordField).toBeDefined()
             passwordField.clear();
             passwordField.sendKeys('AdminPassword')
+            await testBootstrapInstance.waitForSeconds(2)
             done()
         })
     
         it('Must Allow clicking of the login button', async (done) => {
-            const loginButton = await testInterface.getVisibleElementById('LoginButton')
+            const loginButton = await testBootstrapInstance.getVisibleElementById('signinBtn')
             expect(loginButton).toBeDefined()
             loginButton.click();
-            done()
-        })
-    
-        it('Must login successfully', async (done) => {
-            const loggedUserContainer = await testInterface.getElementById('LoggedUserContainer')
-            expect(loggedUserContainer).toBeDefined()
+            await testBootstrapInstance.waitForSeconds(2)
             done()
         })
 })

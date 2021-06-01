@@ -3,29 +3,22 @@ import ConfigModel from "../../../helpers/model/ConfigModel"
 
 export const testInterface = testBootstrapInstance
 export const adminProfileTests = () => {
-    const scriptCheckAfterDelaySec = 2
 
     describe('Display correct admin profile details', () => {
         beforeAll((done) => {
-            testBootstrapInstance.launchSetup().then((response) => {
-                done()
-            }).catch((error) => {
-                console.log(error)
-            })
+            // TODO
         })
 
-        it('Must be routed to the correct url', async (done) => {
-            const data = await testInterface.getCurrentPageUrl()
-            const callStartUrl = ConfigModel.callStartUrl()
-            expect(data).toBe(callStartUrl)
-            done()
-        })
-        
-        it('Must display titles drop down', async (done) => {
-            const usernameField = await testInterface.getVisibleElementById('title')
-            expect(usernameField).toBeDefined()
+        it('Must show file upload input', async (done) => {
+            const fileUploadInput = await testInterface.getVisibleElementById('fileUploadInput')
+            expect(fileUploadInput).toBeDefined()
             done()
         })
 
+        it('Must show file upload button', async (done) => {
+            const fileUploadBtn = await testInterface.getVisibleElementById('submitFileBtn')
+            expect(fileUploadBtn).toBeDefined()
+            done()
+        })
     })
 }
